@@ -231,7 +231,6 @@ public class CsvColumnNameMappingBeanReader<T> implements Closeable {
 		return null;
 	}
 
-	@SuppressWarnings("null")
 	private T convert(final List<String> values) throws IOException {
 		final T bean = template.createBean();
 		for (final Field f : fields) {

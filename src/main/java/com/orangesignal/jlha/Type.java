@@ -148,7 +148,6 @@ final class Type {
 	 * @param obj 判定対象のオブジェクト
 	 * @return obj が type の実体であれば true。<br>違えば false。
 	 */
-	@SuppressWarnings("null")
 	private static boolean match(final Class<?> type, final Object obj) {
 		final String str = obj == null ? null : obj.toString();
 
@@ -210,7 +209,6 @@ final class Type {
 	 * @return 変換後のオブジェクト
 	 * @exception IllegalArgumentException Factory.match( type, obj ) でマッチしていない obj を 変換しようとした場合。
 	 */
-	@SuppressWarnings("null")
 	private static Object parse(final Class<?> type, final Object obj) {
 		final String str = obj == null ? null : obj.toString();
 

@@ -95,7 +95,7 @@ public class CsvResultSet implements ResultSet {
 
 	private void ensureOpen() throws SQLException {
 		if (reader == null) {
-		    throw new SQLException("Stream closed");
+			throw new SQLException("Stream closed");
 		}
 	}
 
@@ -234,7 +234,6 @@ public class CsvResultSet implements ResultSet {
 	 * {@inheritDoc}
 	 * この実装は常に {@link SQLFeatureNotSupportedException} をスローします。
 	 */
-	@SuppressWarnings("deprecation")
 	@Override
 	public BigDecimal getBigDecimal(final int columnIndex, final int scale) throws SQLFeatureNotSupportedException {
 		throw new SQLFeatureNotSupportedException("getBigDecimal(int, int) not supported");
@@ -301,7 +300,6 @@ public class CsvResultSet implements ResultSet {
 	 * {@inheritDoc}
 	 * この実装は常に {@link SQLFeatureNotSupportedException} をスローします。
 	 */
-	@SuppressWarnings("deprecation")
 	@Override
 	public InputStream getUnicodeStream(final int columnIndex) throws SQLFeatureNotSupportedException {
 		throw new SQLFeatureNotSupportedException("getUnicodeStream(int) not supported");
@@ -362,7 +360,6 @@ public class CsvResultSet implements ResultSet {
 	 * {@inheritDoc}
 	 * この実装は {@link SQLFeatureNotSupportedException} をスローします。
 	 */
-	@SuppressWarnings("deprecation")
 	@Override
 	public BigDecimal getBigDecimal(final String columnLabel, final int scale) throws SQLException {
 		return getBigDecimal(findColumn(columnLabel), scale);
@@ -397,7 +394,6 @@ public class CsvResultSet implements ResultSet {
 	 * {@inheritDoc}
 	 * この実装は {@link SQLFeatureNotSupportedException} をスローします。
 	 */
-	@SuppressWarnings("deprecation")
 	@Override
 	public InputStream getUnicodeStream(final String columnLabel) throws SQLException {
 		return getUnicodeStream(findColumn(columnLabel));
@@ -1123,6 +1119,15 @@ public class CsvResultSet implements ResultSet {
 	 * この実装は常に {@link SQLFeatureNotSupportedException} をスローします。
 	 */
 	@Override
+	public <T> T getObject(int columnIndex, Class<T> type) throws SQLException {
+		throw new SQLFeatureNotSupportedException("getObject(int, Class<T>) not supported");
+	}
+	
+	/**
+	 * {@inheritDoc}
+	 * この実装は常に {@link SQLFeatureNotSupportedException} をスローします。
+	 */
+	@Override
 	public Ref getRef(final int columnIndex) throws SQLFeatureNotSupportedException {
 		throw new SQLFeatureNotSupportedException("getRef(int) not supported");
 	}
@@ -1163,6 +1168,15 @@ public class CsvResultSet implements ResultSet {
 	@Override
 	public Object getObject(final String columnLabel, final Map<String, Class<?>> map) throws SQLException {
 		return getObject(findColumn(columnLabel), map);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * この実装は {@link SQLFeatureNotSupportedException} をスローします。
+	 */
+	@Override
+	public <T> T getObject(String columnLabel, Class<T> type) throws SQLException {
+		return getObject(findColumn(columnLabel), type);
 	}
 
 	/**

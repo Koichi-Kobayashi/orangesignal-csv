@@ -37,6 +37,7 @@ import com.orangesignal.jlha.LhaHeader;
  */
 public class CsvReaderBenchmarks extends AbstractBenchmark {
 
+	@SuppressWarnings("unused")
 	@Test
 	public void testOrangeSignalCSV() throws IOException {
 		final CsvConfig cfg = new CsvConfig(CsvConfig.DEFAULT_SEPARATOR);
@@ -63,6 +64,7 @@ public class CsvReaderBenchmarks extends AbstractBenchmark {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	@Test
 	public void testOpenCSV() throws IOException {
 		final LhaFile lhaFile = new LhaFile(new File("src/test/resources/", "ken_all.lzh"));
@@ -85,6 +87,7 @@ public class CsvReaderBenchmarks extends AbstractBenchmark {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	@Test
 	public void testSuperCSV() throws IOException {
 		final LhaFile lhaFile = new LhaFile(new File("src/test/resources/", "ken_all.lzh"));

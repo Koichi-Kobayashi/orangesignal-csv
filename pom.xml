@@ -192,8 +192,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -392,7 +392,7 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>2.5.2</version>
 				<configuration>
-				    <onlyAnalyze>com.orangesignal.csv.*</onlyAnalyze>
+					<onlyAnalyze>com.orangesignal.csv.*</onlyAnalyze>
 					<effort>Max</effort>
 					<threshold>Low</threshold>
 				</configuration>
@@ -402,7 +402,7 @@
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<targetJdk>1.6</targetJdk>
+					<targetJdk>1.8</targetJdk>
 					<excludes>
 						<exclude>com/orangesignal/jlha/*.java</exclude>
 					</excludes>
@@ -459,18 +459,18 @@
 			</build>
 		</profile>
 		<profile>
-			<id>local</id>		    
+			<id>local</id>
 			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
 						<configuration>
-							<source>1.6</source>
-							<target>1.6</target>
+							<source>1.8</source>
+							<target>1.8</target>
 							<!-- see http://maven.apache.org/plugins/maven-compiler-plugin/examples/compile-using-different-jdk.html -->
 							<fork>true</fork>
-							<executable>${JAVA_1_6_HOME}/bin/javac</executable>
+							<executable>${JAVA_1_8_HOME}/bin/javac</executable>
 						</configuration>
 					</plugin>
 				</plugins>

@@ -38,7 +38,6 @@ import com.orangesignal.csv.CsvWriter;
 import com.orangesignal.csv.bean.CsvEntityTemplate;
 import com.orangesignal.csv.entity.DefaultValuePrice;
 import com.orangesignal.csv.entity.Price;
-import com.orangesignal.csv.entity.Travel;
 import com.orangesignal.csv.entity.WritableEntity;
 import com.orangesignal.csv.entity.WritableNoHeaderEntity;
 import com.orangesignal.csv.filters.SimpleCsvNamedValueFilter;
